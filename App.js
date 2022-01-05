@@ -1,20 +1,21 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import * as React from "react";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
+import MapScreen from "./MapScreen";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>RunRouter </Text>
-      <Text>Create Routes for your next run! </Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <MapScreen />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#aaa",
     alignItems: "center",
     justifyContent: "center",
   },
