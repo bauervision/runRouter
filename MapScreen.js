@@ -19,8 +19,8 @@ export default function MapScreen() {
       setMapRegion({
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitudeDelta: 0.01,
+        longitudeDelta: 0.01,
       });
     })();
   }, []);
@@ -37,6 +37,9 @@ export default function MapScreen() {
 const styles = StyleSheet.create({
   map: {
     width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
+    height: Dimensions.get("window").height / 2,
+    margin: 25,
+    borderColor: "#fff",
+    borderWidth: 1,
   },
 });

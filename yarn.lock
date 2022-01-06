@@ -1228,6 +1228,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@miblanchard/react-native-slider@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@miblanchard/react-native-slider/-/react-native-slider-2.1.0.tgz#6249463a9d4aa65dede586637ffe6ca167a9ebf3"
+  integrity sha512-5YRWaQjHl90Ue431RisN+5zr+380L//kWuabzYuo7mVI+CxbHaTQXDr7afkpGgNHCxkkzFlT3tWd+3/QbpgBLQ==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1377,6 +1382,11 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@react-native-community/geolocation/-/geolocation-2.0.2.tgz#ba8b40f560ead8d014740d1cdea970b33f19312e"
   integrity sha512-tTNXRCgnhJBu79mulQwzabXRpDqfh/uaDqfHVpvF0nX4NTpolpy6mvTRiFg7eWFPGRArsnZz1EYp6rHfJWGgEA==
+
+"@react-native-community/slider@^4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-4.1.12.tgz#279ff7bbe487af92ad95ec758a029a54569e2a62"
+  integrity sha512-CiuLZ2orueBiWHYxfaJF57jQY6HY2Q3z5pdAE4MKH8EqIImr/jgDJrJ/UxOVZHK1Ng9P+XlGIKfVIcuWZ6guuA==
 
 "@react-native/assets@1.0.0":
   version "1.0.0"
