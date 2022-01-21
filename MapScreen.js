@@ -1,38 +1,33 @@
-import React, { Component, useState, useEffect } from "react";
-import MapView from "react-native-maps";
-import { StyleSheet, Text, View, Button, Dimensions } from "react-native";
-import * as Location from "expo-location";
+import React, { useRef, forwardRef } from "react";
+import MapView, { Marker } from "react-native-maps";
+import { StyleSheet, Polyline, Dimensions, View } from "react-native";
 
-export default function MapScreen() {
-  const [location, setLocation] = useState(null);
-  const [mapRegion, setMapRegion] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== "granted") {
-        return;
-      }
-
-      let location = await Location.getCurrentPositionAsync({});
-      setLocation(location);
-      setMapRegion({
-        latitude: location.coords.latitude,
-        longitude: location.coords.longitude,
-        latitudeDelta: 0.01,
-        longitudeDelta: 0.01,
-      });
-    })();
-  }, []);
-
+export default MapScreen = forwardRef((props, mapRef) => {
   return (
     <MapView
+      ref={mapRef}
       style={styles.map}
       showsUserLocation={true}
-      initialRegion={mapRegion}
-    />
+      initialRegion={props.mapRegion}
+    >
+      {props.mapRegion && (
+        <Marker title={"My Location"} coordinate={props.mapRegion} />
+      )}
+
+      {props.destination && (
+        <Marker title={"Destination"} coordinate={props.destination} />
+      )}
+      {/* {destination && (
+        <Polyline
+          coordinates={[mapRegion, destination]}
+          strokeColor="#000" // fallback for when `strokeColors` is not supported by the map-provider
+          strokeColors={["#7F0000"]}
+          strokeWidth={6}
+        />
+      )} */}
+    </MapView>
   );
-}
+});
 
 const styles = StyleSheet.create({
   map: {
